@@ -28,6 +28,7 @@
             <div class="row">
               <div class="col-md-6">
                 <form id="contact" action="" method="post">
+                  {% csrf_token %}
                   <div class="row">
                     <div class="col-md-12">
                       <fieldset>
@@ -49,7 +50,7 @@
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <button type="submit" id="form-submit" class="button">Send Message</button>
+                        <button type="submit" id="form-submit" class="button" ><a href="{% url 'messagesent' %}"></a>Send Message</button>
                       </fieldset>
                     </div>
                   </div>
@@ -81,7 +82,7 @@
               <span class="opener">{{request.session.name}}</span>
               <ul>
                 <li><a href="{% url 'profile' pk=request.session.id %}">PROFILE</a></li>
-                <li><a href="#">LOGOUT</a></li>
+                <li><a href="{% url 'index' %}">LOGOUT</a></li>
                 <li><a href="{% url 'servicelist' pk=request.session.id %}">My Wishlist</a></li>
               </ul>
             </li>

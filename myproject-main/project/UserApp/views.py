@@ -25,6 +25,13 @@ def customerindex(request):
     return render(request, 'customerindex.html')
 
 
+# def customerindex(request):
+#     return render(request, 'serviceproviderindex.html')
+
+def messagesent(request):
+    return render(request, messagesent.html)
+
+
 
 def carpenter(request):
     return render(request, 'service/carpenter.html')

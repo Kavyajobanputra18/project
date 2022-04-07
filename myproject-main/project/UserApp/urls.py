@@ -9,9 +9,11 @@ urlpatterns = [
 
     path("contact/",views.contact,name="contact"),
     path("contact2/",views.contact2,name="contact2"),
+    path('messagesent/',views.messagesent,name = 'messagesent'),
 
 
-    path("customerindex/",views.customerindex,name="customerindex"),   
+    path("customerindex/",views.customerindex,name="customerindex"),  
+    # path("serviceproviderindex/",views.customerindex,name="serviceproviderindex"),   
     path("login/",views.login,name="login"),
     
     path("registerpage/",views.registerpage,name="registerpage"),

@@ -64,7 +64,7 @@
                 <span class="opener">{{request.session.name}}</span>
                 <ul>
                   <li><a href="{% url 'profile' pk=request.session.id %}">PROFILE</a></li>
-                  <li><a href="#">LOGOUT</a></li>
+                  <li><a href="{% url 'index' %}">LOGOUT</a></li>
                   <li><a href="{% url 'servicelist' pk=request.session.id %}">My Wishlist</a></li>
                 </ul>
             </li>
